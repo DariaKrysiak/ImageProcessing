@@ -1,0 +1,14 @@
+C:\Users\Daria\source\repos\Image Processing application\bin\Debug\Image Processing application.exe.config
+C:\Users\Daria\source\repos\Image Processing application\bin\Debug\Image Processing application.exe
+C:\Users\Daria\source\repos\Image Processing application\bin\Debug\Image Processing application.pdb
+C:\Users\Daria\source\repos\Image Processing application\obj\Debug\Image Processing application.csprojAssemblyReference.cache
+C:\Users\Daria\source\repos\Image Processing application\obj\Debug\MainWindow.g.cs
+C:\Users\Daria\source\repos\Image Processing application\obj\Debug\App.g.cs
+C:\Users\Daria\source\repos\Image Processing application\obj\Debug\Image Processing application_MarkupCompile.cache
+C:\Users\Daria\source\repos\Image Processing application\obj\Debug\Image Processing application_MarkupCompile.lref
+C:\Users\Daria\source\repos\Image Processing application\obj\Debug\MainWindow.baml
+C:\Users\Daria\source\repos\Image Processing application\obj\Debug\Image Processing application.g.resources
+C:\Users\Daria\source\repos\Image Processing application\obj\Debug\Image_Processing_application.Properties.Resources.resources
+C:\Users\Daria\source\repos\Image Processing application\obj\Debug\Image Processing application.csproj.GenerateResource.cache
+C:\Users\Daria\source\repos\Image Processing application\obj\Debug\Image Processing application.exe
+C:\Users\Daria\source\repos\Image Processing application\obj\Debug\Image Processing application.pdb
