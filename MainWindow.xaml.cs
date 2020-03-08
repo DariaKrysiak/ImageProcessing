@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
+using System.Drawing;
+using ImageProcessingLibrary;
 
 namespace Image_Processing_application
 {
@@ -21,6 +23,8 @@ namespace Image_Processing_application
     /// </summary>
     public partial class MainWindow : Window
     {
+        string fileName;
+        string fileNameForCovertedImage;
         public MainWindow()
         {
             InitializeComponent();
@@ -37,7 +41,29 @@ namespace Image_Processing_application
             if (op.ShowDialog() == true)
             {
                 displayImage.Source = new BitmapImage(new Uri(op.FileName));
+                fileName = op.FileName;
             }
+        }
+
+        private void Convert_Button_Click(object sender, RoutedEventArgs e)
+        {
+            fileNameForCovertedImage = FileNameForConvertedImage();
+            ImageProcess();
+            displayConvertedImage.Source = new BitmapImage(new Uri(fileNameForCovertedImage));
+        }
+
+        private void ImageProcess()
+        {
+            ImageProcessing processing = new ImageProcessing();
+            System.Drawing.Image image = processing.OpenImage(fileName);
+            System.Drawing.Image convertedImage = processing.ToMainColors(image);
+            processing.SaveImage(convertedImage, fileNameForCovertedImage);
+        }
+
+        private string FileNameForConvertedImage()
+        {
+            int fileExtensionIndex = fileName.LastIndexOf(".");
+            return fileName.Substring(0, fileExtensionIndex) + "_converted" + fileName.Substring(fileExtensionIndex, fileName.Length - fileExtensionIndex);
         }
     }
 }

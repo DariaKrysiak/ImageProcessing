@@ -17,8 +17,12 @@
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
 
-        <Button Content="Load image" Grid.Column="0" Grid.Row="0" Width="74" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Load_Button_Click"/>
-        <Image Grid.Column="0" Grid.Row="1" Margin="0,0,0,0" Name="displayImage" Stretch="Uniform"/>
+        <!-- Buttons-->
+        <Button Content="Load image" Grid.Column="0" Grid.Row="0" Width="100" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Load_Button_Click"/>
+        <Button Content="Convert image" Grid.Column="1" Grid.Row="0" Width="100" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Convert_Button_Click"/>
 
+        <!-- Display images-->
+        <Image Grid.Column="0" Grid.Row="1" Margin="0,0,0,0" Name="displayImage" Stretch="Uniform"/>
+        <Image Grid.Column="1" Grid.Row="1" Margin="0,0,0,0" Name="displayConvertedImage" Stretch="Uniform"/>
     </Grid>
 </Window>
