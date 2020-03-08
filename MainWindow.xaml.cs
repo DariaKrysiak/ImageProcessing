@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Microsoft.Win32;
 
 namespace Image_Processing_application
 {
@@ -23,6 +24,20 @@ namespace Image_Processing_application
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Load_Button_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog op = new OpenFileDialog();
+            op.Title = "Select a picture";
+            op.Filter = "All supported graphics|*.jpg;*.png;*.bmp|" +
+              "JPG (*.jpg)|*.jpg" +
+              "PNG (*.png)|*.png" +
+              "BMP (*.bmp)|*.bmp";
+            if (op.ShowDialog() == true)
+            {
+                displayImage.Source = new BitmapImage(new Uri(op.FileName));
+            }
         }
     }
 }

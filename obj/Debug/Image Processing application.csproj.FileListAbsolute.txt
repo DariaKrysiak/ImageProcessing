@@ -12,3 +12,6 @@ C:\Users\Daria\source\repos\Image Processing application\obj\Debug\Image_Process
 C:\Users\Daria\source\repos\Image Processing application\obj\Debug\Image Processing application.csproj.GenerateResource.cache
 C:\Users\Daria\source\repos\Image Processing application\obj\Debug\Image Processing application.exe
 C:\Users\Daria\source\repos\Image Processing application\obj\Debug\Image Processing application.pdb
+C:\Users\Daria\source\repos\Image Processing application\bin\Debug\ImageProcessing.dll
+C:\Users\Daria\source\repos\Image Processing application\bin\Debug\ImageProcessing.pdb
+C:\Users\Daria\source\repos\Image Processing application\obj\Debug\Image Processing application.csproj.CopyComplete
