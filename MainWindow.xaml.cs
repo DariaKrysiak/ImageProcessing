@@ -15,51 +15,51 @@ namespace Image_Processing_application
         public MainWindow()
         {
             InitializeComponent();
-            displayTimer.Text = "00:00:00.0000";
+            durationTime.Text = "00:00:00.0000";
         }
 
         private void Load_Button_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog op = new OpenFileDialog();
-            op.Title = "Select a picture";
-            op.Filter = "All supported graphics|*.jpg;*.png;*.bmp|" +
+            OpenFileDialog dialog = new OpenFileDialog();
+            dialog.Title = "Select a picture";
+            dialog.Filter = "All supported graphics|*.jpg;*.png;*.bmp|" +
               "JPG (*.jpg)|*.jpg" +
               "PNG (*.png)|*.png" +
               "BMP (*.bmp)|*.bmp";
-            if (op.ShowDialog() == true)
+            if (dialog.ShowDialog() == true)
             {
-                displayImage.Source = new BitmapImage(new Uri(op.FileName));
-                fileName = op.FileName;
+                originalImage.Source = new BitmapImage(new Uri(dialog.FileName));
+                fileName = dialog.FileName;
             }
         }
 
         private void Convert_Button_Click(object sender, RoutedEventArgs e)
         {
-            fileNameForCovertedImage = FileNameForConvertedImage();
-            ImageProcess();
-            displayConvertedImage.Source = new BitmapImage(new Uri(fileNameForCovertedImage));
+            fileNameForCovertedImage = PrepareFileNameForConvertedImage();
+            ProcessImage();
+            convertedImage.Source = new BitmapImage(new Uri(fileNameForCovertedImage));
         }
 
-        private void ImageProcess()
+        private void ProcessImage()
         {
             ImageProcessing processing = new ImageProcessing();
             Image image = processing.OpenImage(fileName);
-            DateTime start = DateTime.Now;
+            DateTime startTime = DateTime.Now;
             Image convertedImage = processing.ToMainColors(image);
-            DateTime end = DateTime.Now;
+            DateTime endTime = DateTime.Now;
             processing.SaveImage(convertedImage, fileNameForCovertedImage);
-            Timer(start, end);
+            DisplayDurationTime(startTime, endTime);
         }
 
-        private string FileNameForConvertedImage()
+        private string PrepareFileNameForConvertedImage()
         {
-            int fileExtensionIndex = fileName.LastIndexOf(".");
-            return fileName.Substring(0, fileExtensionIndex) + "_converted" + fileName.Substring(fileExtensionIndex, fileName.Length - fileExtensionIndex);
+            int ExtensionIndex = fileName.LastIndexOf(".");
+            return fileName.Substring(0, ExtensionIndex) + "_converted" + fileName.Substring(ExtensionIndex, fileName.Length - ExtensionIndex);
         }
 
-        private void Timer(DateTime start, DateTime end)
+        private void DisplayDurationTime(DateTime startTime, DateTime endTime)
         {
-            displayTimer.Text = String.Format("{0:hh}:{0:mm}:{0:ss}.{0:ffff}", (end - start));
+            durationTime.Text = string.Format("{0:hh}:{0:mm}:{0:ss}.{0:ffff}", (endTime - startTime));
         }
     }
 }

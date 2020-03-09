@@ -43,7 +43,7 @@ namespace Image_Processing_application {
         
         #line 25 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Image displayImage;
+        internal System.Windows.Controls.Image originalImage;
         
         #line default
         #line hidden
@@ -51,7 +51,7 @@ namespace Image_Processing_application {
         
         #line 26 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.Image displayConvertedImage;
+        internal System.Windows.Controls.Image convertedImage;
         
         #line default
         #line hidden
@@ -59,7 +59,7 @@ namespace Image_Processing_application {
         
         #line 29 "..\..\MainWindow.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.TextBlock displayTimer;
+        internal System.Windows.Controls.TextBlock durationTime;
         
         #line default
         #line hidden
@@ -111,13 +111,13 @@ namespace Image_Processing_application {
             #line hidden
             return;
             case 3:
-            this.displayImage = ((System.Windows.Controls.Image)(target));
+            this.originalImage = ((System.Windows.Controls.Image)(target));
             return;
             case 4:
-            this.displayConvertedImage = ((System.Windows.Controls.Image)(target));
+            this.convertedImage = ((System.Windows.Controls.Image)(target));
             return;
             case 5:
-            this.displayTimer = ((System.Windows.Controls.TextBlock)(target));
+            this.durationTime = ((System.Windows.Controls.TextBlock)(target));
             return;
             }
             this._contentLoaded = true;
