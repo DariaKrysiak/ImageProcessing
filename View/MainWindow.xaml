@@ -18,14 +18,14 @@
         </Grid.RowDefinitions>
 
         <!-- Buttons-->
-        <Button Content="Load image" Grid.Column="0" Grid.Row="0" Width="100" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Load_Button_Click"/>
-        <Button Content="Convert image" Grid.Column="1" Grid.Row="0" Width="100" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Convert_Button_Click"/>
+        <Button Content="Load image" Grid.Column="0" Grid.Row="0" Width="100" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding LoadImage}"/>
+        <Button Content="Convert image" Grid.Column="1" Grid.Row="0" Width="100" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding ConvertImage}"/>
 
         <!-- Display images-->
-        <Image Grid.Column="0" Grid.Row="1" Margin="0,0,5,0" Name="originalImage" Stretch="Uniform"/>
-        <Image Grid.Column="1" Grid.Row="1" Margin="5,0,0,0" Name="convertedImage" Stretch="Uniform"/>
+        <Image Grid.Column="0" Grid.Row="1" Margin="0,0,5,0" Stretch="Uniform" Source="{Binding OriginalImage}"/>
+        <Image Grid.Column="1" Grid.Row="1" Margin="5,0,0,0" Stretch="Uniform" Source="{Binding ConvertedImage}"/>
 
         <!-- Display time-->
-        <TextBlock x:Name="durationTime" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock Grid.Column="1" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding DurationTime}"/>
     </Grid>
 </Window>
