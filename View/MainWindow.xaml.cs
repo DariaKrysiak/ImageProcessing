@@ -1,9 +1,5 @@
-﻿using System;
-using System.Windows;
-using System.Windows.Media.Imaging;
+﻿using System.Windows;
 using Microsoft.Win32;
-using System.Drawing;
-using ImageProcessingLibrary;
 using Image_Processing_application.ViewModel;
 
 namespace Image_Processing_application.View

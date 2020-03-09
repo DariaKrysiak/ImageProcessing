@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
-using ImageProcessingLibrary;
+using Image_Processing_application.Model;
 using Microsoft.Win32;
 
 namespace Image_Processing_application.ViewModel
@@ -79,31 +74,10 @@ namespace Image_Processing_application.ViewModel
 
         private void ConvertImageAction()
         {
-            string fileNameForCovertedImage = PrepareFileNameForConvertedImage();
-            ProcessImage(fileNameForCovertedImage);
+            ImageProcessingModel imageProcessingModel = new ImageProcessingModel();
+            string fileNameForCovertedImage = imageProcessingModel.ProcessImage(this.fileName);
             this.ConvertedImage = new BitmapImage(new Uri(fileNameForCovertedImage));
-        }
-
-        private string PrepareFileNameForConvertedImage()
-        {
-            int ExtensionIndex = this.fileName.LastIndexOf(".");
-            return this.fileName.Substring(0, ExtensionIndex) + "_converted" + this.fileName.Substring(ExtensionIndex, this.fileName.Length - ExtensionIndex);
-        }
-
-        private void ProcessImage(string fileNameForCovertedImage)
-        {
-            ImageProcessing processing = new ImageProcessing();
-            Image image = processing.OpenImage(this.fileName);
-            DateTime startTime = DateTime.Now;
-            Image convertedImage = processing.ToMainColors(image);
-            DateTime endTime = DateTime.Now;
-            processing.SaveImage(convertedImage, fileNameForCovertedImage);
-            DisplayDurationTime(startTime, endTime);
-        }
-
-        private void DisplayDurationTime(DateTime startTime, DateTime endTime)
-        {
-            this.DurationTime = string.Format("{0:hh}:{0:mm}:{0:ss}.{0:ffff}", (endTime - startTime));
+            this.DurationTime = string.Format("{0:hh}:{0:mm}:{0:ss}.{0:ffff}", imageProcessingModel.durationTimeSpan);
         }
 
         public void OnPropertyChanged(string property)

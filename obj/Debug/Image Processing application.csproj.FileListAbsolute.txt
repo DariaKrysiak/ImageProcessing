@@ -14,3 +14,4 @@ C:\Users\Daria\source\repos\Image Processing application\obj\Debug\Image Process
 C:\Users\Daria\source\repos\Image Processing application\obj\Debug\Image Processing application.csproj.CopyComplete
 C:\Users\Daria\source\repos\Image Processing application\obj\Debug\Image Processing application.exe
 C:\Users\Daria\source\repos\Image Processing application\obj\Debug\Image Processing application.pdb
+C:\Users\Daria\source\repos\Image Processing application\obj\Debug\Image Processing application.csprojAssemblyReference.cache
