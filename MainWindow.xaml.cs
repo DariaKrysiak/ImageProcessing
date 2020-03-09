@@ -28,6 +28,7 @@ namespace Image_Processing_application
         public MainWindow()
         {
             InitializeComponent();
+            displayTimer.Text = "00:00:00.0000";
         }
 
         private void Load_Button_Click(object sender, RoutedEventArgs e)
@@ -56,14 +57,22 @@ namespace Image_Processing_application
         {
             ImageProcessing processing = new ImageProcessing();
             System.Drawing.Image image = processing.OpenImage(fileName);
+            DateTime start = DateTime.Now;
             System.Drawing.Image convertedImage = processing.ToMainColors(image);
+            DateTime end = DateTime.Now;
             processing.SaveImage(convertedImage, fileNameForCovertedImage);
+            Timer(start, end);
         }
 
         private string FileNameForConvertedImage()
         {
             int fileExtensionIndex = fileName.LastIndexOf(".");
             return fileName.Substring(0, fileExtensionIndex) + "_converted" + fileName.Substring(fileExtensionIndex, fileName.Length - fileExtensionIndex);
+        }
+
+        private void Timer(DateTime start, DateTime end)
+        {
+            displayTimer.Text = String.Format("{0:hh}:{0:mm}:{0:ss}.{0:ffff}", (end - start));
         }
     }
 }
