@@ -5,7 +5,7 @@ using Microsoft.Win32;
 using System.Drawing;
 using ImageProcessingLibrary;
 
-namespace Image_Processing_application
+namespace Image_Processing_application.View
 {
     public partial class MainWindow : Window
     {
