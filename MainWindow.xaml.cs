@@ -9,7 +9,7 @@ namespace Image_Processing_application
 {
     public partial class MainWindow : Window
     {
-        string fileName;
+        private string fileName;
 
         public MainWindow()
         {
