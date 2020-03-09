@@ -10,7 +10,6 @@ namespace Image_Processing_application
     public partial class MainWindow : Window
     {
         string fileName;
-        string fileNameForCovertedImage;
 
         public MainWindow()
         {
@@ -35,12 +34,12 @@ namespace Image_Processing_application
 
         private void Convert_Button_Click(object sender, RoutedEventArgs e)
         {
-            fileNameForCovertedImage = PrepareFileNameForConvertedImage();
-            ProcessImage();
+            string fileNameForCovertedImage = PrepareFileNameForConvertedImage();
+            ProcessImage(fileNameForCovertedImage);
             convertedImage.Source = new BitmapImage(new Uri(fileNameForCovertedImage));
         }
 
-        private void ProcessImage()
+        private void ProcessImage(string fileNameForCovertedImage)
         {
             ImageProcessing processing = new ImageProcessing();
             Image image = processing.OpenImage(fileName);
