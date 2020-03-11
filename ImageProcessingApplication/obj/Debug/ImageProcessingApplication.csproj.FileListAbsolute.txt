@@ -1,0 +1,17 @@
+D:\ImageProcessing\ImageProcessingApplication\bin\Debug\ImageProcessingApplication.exe.config
+D:\ImageProcessing\ImageProcessingApplication\bin\Debug\ImageProcessingApplication.exe
+D:\ImageProcessing\ImageProcessingApplication\bin\Debug\ImageProcessingApplication.pdb
+D:\ImageProcessing\ImageProcessingApplication\bin\Debug\ImageProcessing.dll
+D:\ImageProcessing\ImageProcessingApplication\bin\Debug\ImageProcessing.pdb
+D:\ImageProcessing\ImageProcessingApplication\obj\Debug\ImageProcessingApplication.csprojAssemblyReference.cache
+D:\ImageProcessing\ImageProcessingApplication\obj\Debug\View\MainWindow.g.cs
+D:\ImageProcessing\ImageProcessingApplication\obj\Debug\App.g.cs
+D:\ImageProcessing\ImageProcessingApplication\obj\Debug\ImageProcessingApplication_MarkupCompile.cache
+D:\ImageProcessing\ImageProcessingApplication\obj\Debug\ImageProcessingApplication_MarkupCompile.lref
+D:\ImageProcessing\ImageProcessingApplication\obj\Debug\View\MainWindow.baml
+D:\ImageProcessing\ImageProcessingApplication\obj\Debug\ImageProcessingApplication.g.resources
+D:\ImageProcessing\ImageProcessingApplication\obj\Debug\ImageProcessingApplication.Properties.Resources.resources
+D:\ImageProcessing\ImageProcessingApplication\obj\Debug\ImageProcessingApplication.csproj.GenerateResource.cache
+D:\ImageProcessing\ImageProcessingApplication\obj\Debug\ImageProcessingApplication.csproj.CopyComplete
+D:\ImageProcessing\ImageProcessingApplication\obj\Debug\ImageProcessingApplication.exe
+D:\ImageProcessing\ImageProcessingApplication\obj\Debug\ImageProcessingApplication.pdb
