@@ -1,0 +1,10 @@
+C:\Users\Daria\source\repos\ImageProcessing\bin\Debug\ImageProcessing.dll
+C:\Users\Daria\source\repos\ImageProcessing\bin\Debug\ImageProcessing.pdb
+C:\Users\Daria\source\repos\ImageProcessing\obj\Debug\ImageProcessing.csprojAssemblyReference.cache
+C:\Users\Daria\source\repos\ImageProcessing\obj\Debug\ImageProcessing.dll
+C:\Users\Daria\source\repos\ImageProcessing\obj\Debug\ImageProcessing.pdb
+C:\Users\Daria\source\repos\ImageProcessingProject\ImageProcessing\obj\Debug\ImageProcessing.csprojAssemblyReference.cache
+C:\Users\Daria\source\repos\ImageProcessingProject\ImageProcessing\obj\Debug\ImageProcessing.dll
+C:\Users\Daria\source\repos\ImageProcessingProject\ImageProcessing\obj\Debug\ImageProcessing.pdb
+C:\Users\Daria\source\repos\ImageProcessingProject\ImageProcessing\bin\Debug\ImageProcessing.dll
+C:\Users\Daria\source\repos\ImageProcessingProject\ImageProcessing\bin\Debug\ImageProcessing.pdb
