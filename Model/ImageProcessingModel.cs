@@ -2,9 +2,9 @@
 using System.Drawing;
 using ImageProcessingLibrary;
 
-namespace Image_Processing_application.Model
+namespace ImageProcessingApplication.Model
 {
-    class ImageProcessingModel
+    public class ImageProcessingModel
     {
         public TimeSpan durationTimeSpan;
 

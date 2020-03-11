@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace Image_Processing_application.ViewModel
+namespace ImageProcessingApplication.ViewModel
 {
     class RelayCommand : ICommand
     {

@@ -1,8 +1,8 @@
 ﻿using System.Windows;
 using Microsoft.Win32;
-using Image_Processing_application.ViewModel;
+using ImageProcessingApplication.ViewModel;
 
-namespace Image_Processing_application.View
+namespace ImageProcessingApplication.View
 {
     public partial class MainWindow : Window
     {

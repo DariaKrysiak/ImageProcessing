@@ -2,10 +2,10 @@
 using System.ComponentModel;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
-using Image_Processing_application.Model;
+using ImageProcessingApplication.Model;
 using Microsoft.Win32;
 
-namespace Image_Processing_application.ViewModel
+namespace ImageProcessingApplication.ViewModel
 {
     public class MainWindowViewModel : INotifyPropertyChanged
     {
