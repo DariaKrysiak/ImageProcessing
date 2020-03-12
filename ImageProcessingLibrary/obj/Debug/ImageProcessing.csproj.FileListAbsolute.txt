@@ -8,3 +8,8 @@ C:\Users\Daria\source\repos\ImageProcessingProject\ImageProcessing\obj\Debug\Ima
 C:\Users\Daria\source\repos\ImageProcessingProject\ImageProcessing\obj\Debug\ImageProcessing.pdb
 C:\Users\Daria\source\repos\ImageProcessingProject\ImageProcessing\bin\Debug\ImageProcessing.dll
 C:\Users\Daria\source\repos\ImageProcessingProject\ImageProcessing\bin\Debug\ImageProcessing.pdb
+C:\Users\Daria\source\repos\ImageProcessing\ImageProcessingLibrary\bin\Debug\ImageProcessing.dll
+C:\Users\Daria\source\repos\ImageProcessing\ImageProcessingLibrary\bin\Debug\ImageProcessing.pdb
+C:\Users\Daria\source\repos\ImageProcessing\ImageProcessingLibrary\obj\Debug\ImageProcessing.dll
+C:\Users\Daria\source\repos\ImageProcessing\ImageProcessingLibrary\obj\Debug\ImageProcessing.pdb
+C:\Users\Daria\source\repos\ImageProcessing\ImageProcessingLibrary\obj\Debug\ImageProcessing.csprojAssemblyReference.cache

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Media.Imaging;
 using ImageProcessingApplication.Model;
@@ -25,6 +26,11 @@ namespace ImageProcessingApplication.ViewModel
         public ICommand ConvertImage
         {
             get { return new RelayCommand(ConvertImageAction); }
+        }
+
+        public ICommand ConvertImageAsync
+        {
+            get { return new RelayCommand(ConvertImageAsyncAction); }
         }
 
         public BitmapImage OriginalImage
@@ -76,6 +82,14 @@ namespace ImageProcessingApplication.ViewModel
         {
             ImageProcessingModel imageProcessingModel = new ImageProcessingModel();
             string fileNameForCovertedImage = imageProcessingModel.ProcessImage(this.fileName);
+            this.ConvertedImage = new BitmapImage(new Uri(fileNameForCovertedImage));
+            this.DurationTime = string.Format("{0:hh}:{0:mm}:{0:ss}.{0:ffff}", imageProcessingModel.durationTimeSpan);
+        }
+
+        private async void ConvertImageAsyncAction()
+        {
+            ImageProcessingModel imageProcessingModel = new ImageProcessingModel();
+            string fileNameForCovertedImage = await imageProcessingModel.ProcessImageAsync(this.fileName);
             this.ConvertedImage = new BitmapImage(new Uri(fileNameForCovertedImage));
             this.DurationTime = string.Format("{0:hh}:{0:mm}:{0:ss}.{0:ffff}", imageProcessingModel.durationTimeSpan);
         }
