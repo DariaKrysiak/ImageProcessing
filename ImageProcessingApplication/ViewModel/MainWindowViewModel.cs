@@ -14,6 +14,7 @@ namespace ImageProcessingApplication.ViewModel
         private BitmapImage convertedImage;
         private string durationTime;
         private string fileName;
+        private bool isAsync = false;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -25,6 +26,11 @@ namespace ImageProcessingApplication.ViewModel
         public ICommand ConvertImage
         {
             get { return new RelayCommand(ConvertImageAction); }
+        }
+
+        public ICommand ConvertImageAsync
+        {
+            get { return new RelayCommand(ConvertImageAsyncAction); }
         }
 
         public BitmapImage OriginalImage
@@ -75,9 +81,16 @@ namespace ImageProcessingApplication.ViewModel
         private void ConvertImageAction()
         {
             ImageProcessingModel imageProcessingModel = new ImageProcessingModel();
-            string fileNameForCovertedImage = imageProcessingModel.ProcessImage(this.fileName);
+            string fileNameForCovertedImage = imageProcessingModel.ProcessImage(this.fileName, this.isAsync);
             this.ConvertedImage = new BitmapImage(new Uri(fileNameForCovertedImage));
             this.DurationTime = string.Format("{0:hh}:{0:mm}:{0:ss}.{0:ffff}", imageProcessingModel.durationTimeSpan);
+        }
+
+        private void ConvertImageAsyncAction()
+        {
+            this.isAsync = true;
+            ConvertImageAction();
+            this.isAsync = false;
         }
 
         public void OnPropertyChanged(string property)
